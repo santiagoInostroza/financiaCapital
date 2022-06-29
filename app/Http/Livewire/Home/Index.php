@@ -22,7 +22,7 @@ class Index extends Component{
         return Property::all();
     }
 
-    public function sendRequest($propertyId, $userId, $message){
+    public function sendRequest(Int $propertyId, Int $userId, String $message){
         $requestController = new RequestController();
         $requestController->saveRequest($propertyId, $userId, $message);
 

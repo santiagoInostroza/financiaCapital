@@ -5,7 +5,6 @@ namespace App\Http\Livewire\Properties;
 use App\Models\Property;
 use Livewire\Component;
 use Livewire\WithPagination;
-use PhpParser\Node\Expr\AssignOp\ShiftLeft;
 
 class Index extends Component{
 
@@ -16,7 +15,8 @@ class Index extends Component{
     public $columns;
     public $sortField;
     public $sortOrder;
-
+    
+    
     public function mount(){
         $this->search = '';
         $this->numRows = (session()->has('properties.numRows') ) ? session('properties.numRows') : 10;
@@ -41,6 +41,7 @@ class Index extends Component{
         $this->sortField = (session()->has('properties.sortField') ) ? session('properties.sortField') : 'id';
         $this->sortOrder = (session()->has('properties.sortOrder') ) ? session('properties.sortOrder') : 'asc';
     }
+    
 
     public function render(){
         $properties = Property::
@@ -59,8 +60,8 @@ class Index extends Component{
         return view('livewire.properties.index',compact('properties'));
     }
 
-
-    public function selectColumns($value){
+    // select columns: permite seleccionar las columnas que se mostraran en la tabla
+    public function selectColumns(String $value){
         switch ($value) {
             case 'all':
                 foreach ($this->columns as $name_column => $column ) {
@@ -101,7 +102,7 @@ class Index extends Component{
         ]);
     }
 
-    public function delete($id){
+    public function delete(Int $id){
         $property = Property::find($id);
         $property->delete();
         $this->dispatchBrowserEvent('salert',[
@@ -113,7 +114,8 @@ class Index extends Component{
         ]);
     }
 
-    public function sortBy($column){
+    // sortBy: permite ordenar las columnas de la tabla
+    public function sortBy(String $column){
         $this->sortField = $column;
         $this->sortOrder = $this->sortOrder == 'asc' ? 'desc' : 'asc';
         session([

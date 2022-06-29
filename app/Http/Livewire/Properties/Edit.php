@@ -20,10 +20,6 @@ class Edit extends Component{
     public $bathrooms;
     public $area;
 
-    public function mount(){
-        
-    }
-
     protected $rules=[
         'image'=>'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         'property.description'=>'nullable|string|max:255',
