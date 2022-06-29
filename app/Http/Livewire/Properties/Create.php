@@ -10,8 +10,6 @@ use App\Models\Property;
 class Create extends Component{
     use WithFileUploads;
 
-    
-
     public $image;
     public $description;
     public $address;

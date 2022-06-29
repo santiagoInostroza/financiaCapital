@@ -169,6 +169,9 @@
                                                                 <div>
                                                                    {{$property->request_message}}
                                                                 </div>
+                                                                <div>
+                                                                    {{Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $property->request_created_at)->diffForHumans()}}
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>                                                    

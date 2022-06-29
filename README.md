@@ -11,6 +11,24 @@ Y por ultimo ejecutar php artisan serve.
 
 Con esto ya podrás hacer las pruebas correspondientes.
 
+Usuarios disponibles:
+
+usuario 1 
+u1@gmail.com
+contraseña 12345678
+
+usuario 2 
+u2@gmail.com
+contraseña 12345678
+
+usuario 3 
+u3@gmail.com
+contraseña 12345678
+
+usuario 4 
+u4@gmail.com
+contraseña 12345678
+
 ...
 
 
