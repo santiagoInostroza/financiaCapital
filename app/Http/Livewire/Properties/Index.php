@@ -23,7 +23,7 @@ class Index extends Component{
         $this->columns = (session()->has('properties.columns') ) ? session('properties.columns') : [
             // 'id' => ['value' =>true, 'name' =>'Id', 'sortable' =>true], 
             'image' => ['value' =>true, 'name' =>'Imagen','type' =>'image'],
-            'user_name' => ['value' =>true, 'name' =>'Solicitudes','type' =>'text'],
+            'request' => ['value' =>true, 'name' =>'Solicitudes'],
             'address' => ['value' =>true, 'name' =>'Dirección', 'sortable' =>true],
             'price' => ['value' =>true, 'name' =>'Valor', 'sortable' =>true, 'type' =>'money'],
             'description' => ['value' =>true, 'name' =>'Descripcion', 'sortable' =>true, 'type' =>'text'],
@@ -31,12 +31,11 @@ class Index extends Component{
             'bathrooms' => ['value' =>true, 'name' =>'Baños', 'sortable' =>true],
             'garage' => ['value' =>true, 'name' =>'Estacionamientos', 'sortable' =>true],
             'area' => ['value' =>true, 'name' =>'Area', 'sortable' =>true],
-            // 'user_id' => ['value' =>true, 'name' =>'Usuario'],
-           
-        //     'date' => ['value' =>true, 'name' =>'Fecha','type' =>'date'],
-        //     'price' => ['value' =>true, 'name' =>'Precio','type' =>'money'],
-        //     'active' => ['value' =>true, 'name' =>'Activo','type' =>'boolean'],
-        //    'text' => ['value' =>true, 'name' =>'Texto','type' =>'text'],
+            //    'user_id' => ['value' =>true, 'name' =>'Usuario'],
+            //    'date' => ['value' =>true, 'name' =>'Fecha','type' =>'date'],
+            //    'price' => ['value' =>true, 'name' =>'Precio','type' =>'money'],
+            //    'active' => ['value' =>true, 'name' =>'Activo','type' =>'boolean'],
+            //    'text' => ['value' =>true, 'name' =>'Texto','type' =>'text'],
             'accions' => ['value' =>true, 'name' =>'Acciones'],
         ];
         $this->sortField = (session()->has('properties.sortField') ) ? session('properties.sortField') : 'id';
@@ -54,7 +53,7 @@ class Index extends Component{
             ->orWhere('price', 'like', "%{$this->search}%");
         })
        
-        ->select('properties.*', 'users.name as user_name', 'users.email as user_email', 'requests.status as request_status','requests.created_at as request_created_at','requests.message as request_message')
+        ->select('properties.*', 'users.name as user_name', 'users.email as user_email', 'requests.id as request', 'requests.status as request_status','requests.created_at as request_created_at','requests.message as request_message')
         ->orderBy($this->sortField, $this->sortOrder)
         ->paginate($this->numRows);
         return view('livewire.properties.index',compact('properties'));

@@ -142,21 +142,19 @@
                         <x-tables.tr>
                             @foreach ($columns as $name_column => $column)                
                                 @if ($column['value'])
-                                        @if ($name_column == 'id')
+                                        @if ($name_column == 'address')
                                             <x-tables.td class='text-left'>
-                                                {{ $property->id }}
+                                                {{ $property->address }}
                                             </x-tables.td>
-                                        @elseif ($name_column == 'user_name')
+                                            
+                                        @elseif ($name_column == 'request')
                                             <x-tables.td class='text-left'>
-                                                @if ($property->user_name)
-                                                    <div id='tooltip_text_{{$property->id}}' x-data='{tooltip:false}' x-on:mouseleave='tooltip=false'>
+                                               
+                                                @if ($property->request != null  )
+                                                    <div id='tooltip_text_{{$property->request}}_{{rand()}}' x-data='{tooltip:false}' x-on:mouseleave='tooltip=false'>
                                                         <div x-on:mouseover='tooltip=true' class="cursor-pointer">
                                                             <div class="flex items-center gap-2">
-                                                                <div class="p-1 text-white bg-red-500 rounded-full ">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                                                                    </svg>
-                                                                </div>
+                                                                <span class="p-1 px-2 text-white bg-red-500 rounded-full ">1</span>
                                                                 <span class="text-base font-bold"> {{ $property->user_name }}</span>
                                                             </div>
                                                             <div class="m-1">
@@ -194,7 +192,7 @@
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                                                         </svg>
                                                       
-                                                        <div x-show='dropdown' x-cloak >
+                                                        <div x-show='dropdown' x-cloak>
                                                             <x-modals.alert>
                                                                 <x-slot name='header'>
                                                                     Eliminar Propiedad
