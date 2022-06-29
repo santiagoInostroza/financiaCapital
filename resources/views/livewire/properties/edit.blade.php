@@ -55,27 +55,50 @@
                 
                    <div class="grid grid-cols-3 gap-4">
                        <div class="col-span-3">
-                           <x-jet-input class="block w-full" type="text" wire:model.defer="property.address" placeholder="Dirección de la propiedad" />
-                           @error('property.address')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
-                       </div>
-                       <textarea class="col-span-3 border border-gray-300 rounded"  wire:model.defer="property.description" placeholder="Descripción de la propiedad"> </textarea>
-                       @error('property.description')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
-                       <div class="col-span-3">
-                           <x-jet-input class="block w-full" type="text" wire:model.defer="property.price" placeholder="Precio de la propiedad (valor en UF)" />
-                           @error('property.price')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
+                        <label>
+                            Dirección
+                            <x-jet-input class="block w-full" type="text" wire:model.defer="property.address" placeholder="Dirección de la propiedad" />
+                            @error('property.address')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
+                        </label>
+                           
+                        </div>
+                        <div class="col-span-3">
+                           <label>
+                               Descripción
+                               <textarea class="w-full col-span-3 border border-gray-300 rounded"  wire:model.defer="property.description" placeholder="Descripción de la propiedad"> </textarea>
+                               @error('property.description')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
+                            </label>
+                        </div>
+                       
+                        <div class="col-span-3">
+                            <label>
+                                Precio (valor en UF) 
+                                <x-jet-input class="block w-full" type="text" wire:model.defer="property.price" placeholder="Precio de la propiedad (valor en UF)" />
+                                @error('property.price')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
+                            </label>
                        </div>
                        <div class="col-span-1">
-                           <x-jet-input class="block w-full" type="text" wire:model.defer="property.bedrooms" placeholder="Cuartos" />
-                           @error('property.bedrooms')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
+                            <label>
+                                Cuartos 
+                                <x-jet-input class="block w-full" type="text" wire:model.defer="property.bedrooms" placeholder="Cuartos" />
+                                @error('property.bedrooms')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
+                            </label>
+                           
+                        </div>
+                        <div class="col-span-1">
+                            <label>
+                                Baños 
+                                <x-jet-input class="block w-full" type="text" wire:model.defer="property.bathrooms" placeholder="Baños" />
+                                @error('property.bathrooms')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
+                            </label>
                        </div>
-                       <div class="col-span-1">
-                           <x-jet-input class="block w-full" type="text" wire:model.defer="property.bathrooms" placeholder="Baños" />
-                           @error('property.bathrooms')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
-                       </div>
-                       <div class="col-span-1">
-                           <x-jet-input class="block w-full" type="text" wire:model.defer="property.area" placeholder="Area" />
-                           @error('property.area')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
-                       </div>
+                        <div class="col-span-1">
+                            <label>
+                                Area (m2) 
+                                <x-jet-input class="block w-full" type="text" wire:model.defer="property.area" placeholder="Area" />
+                                @error('property.area')<span class='p-1 text-sm text-red-500'>{{ $message }}</span>@enderror
+                            </label>
+                        </div>
                    </div>
                 
                   
