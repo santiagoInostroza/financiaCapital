@@ -20,7 +20,7 @@ Estas instrucciones están realizadas para ser seguidas desde windows, no se ha 
 
 ## Instrucciones en Windows
 
-Abre el terminal wsl2 (Terminal linux en Windows) en la carpeta donde guardaras tu proyecto. Puedes clonar con `SSH` o `HTTPS`
+Abre el terminal wsl2 (Terminal linux en Windows) en la carpeta donde guardarás tu proyecto. Puedes clonar con `SSH` o `HTTPS`
 
 Clonar con SSH
 (Si no tienes configuradas tus llaves SSH en GitHub puedes mirar este [tutorial para configurar llaves SSH](https://platzi.com/tutoriales/1557-git-github/4067-configurar-llaves-ssh-en-git-y-github/) )
