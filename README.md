@@ -1,15 +1,16 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-
-# Esta es una prueba técnica solicitada por Una empresa para un puesto Semi Senior
-
 ## Descripción
+
+### Esta es una prueba técnica solicitada por Una empresa para un puesto Semi Senior
+
+### Solicitud: [FC  CTR-304_ Coding Assignment.pdf](https://github.com/santiagoInostroza/financiaCapital/files/13242752/FC.CTR-304_.Coding.Assignment.pdf)
 
 Estas instrucciones están realizadas para ser seguidas desde windows, no se ha probado desde Linux ni Mac.
 
 ## Requisitos
 
-[FC  CTR-304_ Coding Assignment.pdf](https://github.com/santiagoInostroza/financiaCapital/files/13242752/FC.CTR-304_.Coding.Assignment.pdf)
+
 
 - Sistema operativo Windows
 - Tener Instalado Docker Desktop <a href="https://youtu.be/9AZAVlknsVI">Video como instalar Docker Desktop acá</a>
