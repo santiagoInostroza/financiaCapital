@@ -1,15 +1,98 @@
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-# Financia Capital
 
-Para correr la aplicación:
+# Esta es una prueba técnica solicitada por Una empresa para un puesto Semi Senior
+
+## Descripción
+
+Estas instrucciones están realizadas para ser seguidas desde windows, no se ha probado desde Linux ni Mac.
+
+## Requisitos
+
+- Sistema operativo Windows
+- Tener Instalado Docker Desktop <a href="https://youtu.be/9AZAVlknsVI">Video como instalar Docker Desktop acá</a>
+- Tener Instalado Wsl2  <a href="https://youtu.be/9AZAVlknsVI">Video como instalar Wsl2 acá</a>
+- Tener Configurado Docker Desktop  <a href="https://youtu.be/9AZAVlknsVI">Video como configurar Docker Desktop acá</a>
+- Tener instalado Git
+
+## Instrucciones en Windows
+
+Abre el terminal wsl2 (Terminal linux en Windows) en la carpeta donde guardaras tu proyecto. Puedes clonar con `SSH` o `HTTPS`
+
+Clonar con SSH
+(Si no tienes configuradas tus llaves SSH en GitHub puedes mirar este [tutorial para configurar llaves SSH](https://platzi.com/tutoriales/1557-git-github/4067-configurar-llaves-ssh-en-git-y-github/) )
+
+
+    git clone git@github.com:santiagoInostroza/Laravel10Vue3.git
+    
+
+Si no quieres configurar tus llaves SSH puedes:
+Clonar con HTTPS
+
+
+     https://github.com/santiagoInostroza/Laravel10Vue3.git
+
+
+Ingresa a la carpeta
+
+
+    cd Laravel10Vue3 
+    
+    
+Abre vs code
+
+    code .
+    
+Asegurate que docker este corriendo y de preferencia no hayan contenedores cargados e ingresa el siguiente comando: 
+
+    docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqs
+
+Este comando usa un pequeño contenedor Docker que contiene PHP y Composer para instalar las dependencias de la aplicación
+
+Copia archivo .env
+
+
+    cp .env.example .env
+
+Reemplaza en el .env recien creado estas variables
+
+    DB_HOST=mysql
+    DB_USERNAME=sail
+    DB_PASSWORD=password
+
+Corre Sail
+
+    ./vendor/bin/sail up     
+    
+Crea llave de la aplicación
+
+    ./vendor/bin/sail artisan key:generate
+
+
+    
+    
+Instala Npm
+
+    ./vendor/bin/sail npm install
+   
+    ./vendor/bin/sail npm run dev
+
+    
+Actualizar composer
+
+    ./vendor/bin/sail composer update    
 
 Correr las migraciones en conjunto con los seeders que trae algunos usuarios y propiedades para comenzar a hacer las pruebas.
 
-Ejecutar npm run dev que hará correr vite, de lo contrario no se verán los estilos.
+    ./vendor/bin/sail artisan migrate --seed
 
-Y por ultimo ejecutar php artisan serve.
 
-Con esto ya podrás hacer las pruebas correspondientes.
+Finalmente <a href="http://localhost" >Abre localhost</a>
 
 Usuarios disponibles:
 
@@ -28,71 +111,3 @@ contraseña 12345678
 usuario 4 
 u4@gmail.com
 contraseña 12345678
-
-...
-
-
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
