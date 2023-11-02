@@ -2,9 +2,9 @@
 
 ## Descripción
 
-### Esta es una prueba técnica solicitada por Una empresa para un puesto Semi Senior
+Esta es una prueba técnica solicitada por Una empresa para un puesto Semi Senior
 
-### Solicitud: [FC  CTR-304_ Coding Assignment.pdf](https://github.com/santiagoInostroza/financiaCapital/files/13242752/FC.CTR-304_.Coding.Assignment.pdf)
+Prueba técnica: [FC  CTR-304_ Coding Assignment.pdf](https://github.com/santiagoInostroza/financiaCapital/files/13242752/FC.CTR-304_.Coding.Assignment.pdf)
 
 Estas instrucciones están realizadas para ser seguidas desde windows, no se ha probado desde Linux ni Mac.
 
