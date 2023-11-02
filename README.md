@@ -9,6 +9,8 @@ Estas instrucciones están realizadas para ser seguidas desde windows, no se ha 
 
 ## Requisitos
 
+[FC  CTR-304_ Coding Assignment.pdf](https://github.com/santiagoInostroza/financiaCapital/files/13242752/FC.CTR-304_.Coding.Assignment.pdf)
+
 - Sistema operativo Windows
 - Tener Instalado Docker Desktop <a href="https://youtu.be/9AZAVlknsVI">Video como instalar Docker Desktop acá</a>
 - Tener Instalado Wsl2  <a href="https://youtu.be/9AZAVlknsVI">Video como instalar Wsl2 acá</a>
