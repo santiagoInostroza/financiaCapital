@@ -26,14 +26,14 @@ Clonar con SSH
 (Si no tienes configuradas tus llaves SSH en GitHub puedes mirar este [tutorial para configurar llaves SSH](https://platzi.com/tutoriales/1557-git-github/4067-configurar-llaves-ssh-en-git-y-github/) )
 
 
-    git clone git@github.com:santiagoInostroza/Laravel10Vue3.git
+    git clone git@github.com:santiagoInostroza/financiaCapital.git
     
 
 Si no quieres configurar tus llaves SSH puedes:
 Clonar con HTTPS
 
 
-     https://github.com/santiagoInostroza/Laravel10Vue3.git
+     https://github.com/santiagoInostroza/financiaCapital.git
 
 
 Ingresa a la carpeta
